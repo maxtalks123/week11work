@@ -1,6 +1,7 @@
 import { UserContext } from "./UserContext/UserContext";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
+import { Counter } from "./Counter";
 
 export function Home() {
   let { username, setUsername } = useContext(UserContext);
@@ -20,6 +21,9 @@ export function Home() {
       </button>
       <h2>Theme: {theme}</h2>
       <button onClick={handleThemeToggle}>Change theme to dark</button>
+      <div>
+        <Counter />
+      </div>
     </>
   );
 }
